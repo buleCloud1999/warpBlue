@@ -5,27 +5,43 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: ltcf.houniaollq.workers.dev-HTTP-80-ltcf.houniao.top-EDtunnel, server: ltcf.houniao.top, port: 80, client-fingerprint: random, type: vless, uuid: d342d11e-d424-4583-b36e-524ab1f0af14, tls: false, tfo: false, servername: ltcf.houniaollq.workers.dev, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: ltcf.houniaollq.workers.dev}}, udp: true}
+  - {name: ltcf1.houniao.top, server: ltcf1.houniao.top, port: 80, client-fingerprint: random, type: vless, uuid: d342d11e-d424-4583-b36e-524ab1f0af14, tls: false, tfo: false, servername: ltcf.houniaollq.workers.dev, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: ltcf.houniaollq.workers.dev}}, udp: true}
+  - {name: ltcf2.houniao.top, server: ltcf2.houniao.top, port: 80, client-fingerprint: random, type: vless, uuid: d342d11e-d424-4583-b36e-524ab1f0af14, tls: false, tfo: false, servername: ltcf.houniaollq.workers.dev, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: ltcf.houniaollq.workers.dev}}, udp: true}
+  - {name: ltcf3.houniao.top, server: ltcf3.houniao.top, port: 80, client-fingerprint: random, type: vless, uuid: d342d11e-d424-4583-b36e-524ab1f0af14, tls: false, tfo: false, servername: ltcf.houniaollq.workers.dev, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: ltcf.houniaollq.workers.dev}}, udp: true}
+  - {name: ltcf4.houniao.top, server: ltcf4.houniao.top, port: 80, client-fingerprint: random, type: vless, uuid: d342d11e-d424-4583-b36e-524ab1f0af14, tls: false, tfo: false, servername: ltcf.houniaollq.workers.dev, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: ltcf.houniaollq.workers.dev}}, udp: true}
+  - {name: ltcf5.houniao.top, server: ltcf5.houniao.top, port: 80, client-fingerprint: random, type: vless, uuid: d342d11e-d424-4583-b36e-524ab1f0af14, tls: false, tfo: false, servername: ltcf.houniaollq.workers.dev, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: ltcf.houniaollq.workers.dev}}, udp: true}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - 🎯 全球直连
-      - ltcf.houniaollq.workers.dev-HTTP-80-ltcf.houniao.top-EDtunnel
+      - ltcf1.houniao.top
+      - ltcf2.houniao.top
+      - ltcf3.houniao.top
+      - ltcf4.houniao.top
+      - ltcf5.houniao.top
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - ltcf.houniaollq.workers.dev-HTTP-80-ltcf.houniao.top-EDtunnel
+      - ltcf1.houniao.top
+      - ltcf2.houniao.top
+      - ltcf3.houniao.top
+      - ltcf4.houniao.top
+      - ltcf5.houniao.top
   - name: 🎥 NETFLIX
     type: select
     proxies:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - ltcf.houniaollq.workers.dev-HTTP-80-ltcf.houniao.top-EDtunnel
+      - ltcf1.houniao.top
+      - ltcf2.houniao.top
+      - ltcf3.houniao.top
+      - ltcf4.houniao.top
+      - ltcf5.houniao.top
   - name: ⛔️ 广告拦截
     type: select
     proxies:
@@ -44,7 +60,11 @@ proxy-groups:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - ltcf.houniaollq.workers.dev-HTTP-80-ltcf.houniao.top-EDtunnel
+      - ltcf1.houniao.top
+      - ltcf2.houniao.top
+      - ltcf3.houniao.top
+      - ltcf4.houniao.top
+      - ltcf5.houniao.top
   - name: 🌏 国内媒体
     type: select
     proxies:
@@ -55,20 +75,32 @@ proxy-groups:
     proxies:
       - 🎯 全球直连
       - 🔰 节点选择
-      - ltcf.houniaollq.workers.dev-HTTP-80-ltcf.houniao.top-EDtunnel
+      - ltcf1.houniao.top
+      - ltcf2.houniao.top
+      - ltcf3.houniao.top
+      - ltcf4.houniao.top
+      - ltcf5.houniao.top
   - name: 📲 电报信息
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
-      - ltcf.houniaollq.workers.dev-HTTP-80-ltcf.houniao.top-EDtunnel
+      - ltcf1.houniao.top
+      - ltcf2.houniao.top
+      - ltcf3.houniao.top
+      - ltcf4.houniao.top
+      - ltcf5.houniao.top
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - ltcf.houniaollq.workers.dev-HTTP-80-ltcf.houniao.top-EDtunnel
+      - ltcf1.houniao.top
+      - ltcf2.houniao.top
+      - ltcf3.houniao.top
+      - ltcf4.houniao.top
+      - ltcf5.houniao.top
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -84,7 +116,11 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - ltcf.houniaollq.workers.dev-HTTP-80-ltcf.houniao.top-EDtunnel
+      - ltcf1.houniao.top
+      - ltcf2.houniao.top
+      - ltcf3.houniao.top
+      - ltcf4.houniao.top
+      - ltcf5.houniao.top
 rules:
  - DOMAIN-SUFFIX,local,🎯 全球直连
  - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
